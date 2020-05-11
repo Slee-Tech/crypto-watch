@@ -21,9 +21,7 @@ export const getCoins = () => (dispatch, getState) => {
 
     console.log("fetching from API");
     axios
-        .get(
-            "https://api.nomics.com/v1/currencies/ticker?key=24e295ec3c16f93ee8f38c7a4569b3bb&interval=1d,30&convert=EUR"
-        )
+        .get(process.env.REACT_APP_CRYPTO)
         .then((res) => {
             dispatch({
                 type: GET_COINS,

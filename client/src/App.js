@@ -15,10 +15,6 @@ import Dashboard from "./components/Dashboard";
 
 class App extends React.Component {
     componentDidMount() {
-        // store.dispatch(test());
-        // /* use this onChange in search input, to first fetch symbols and cache in Redux?
-        // https://api.nomics.com/v1/currencies/ticker?key=24e295ec3c16f93ee8f38c7a4569b3bb&interval=1d,30&convert=EUR
-        // */
         store.dispatch(loadUser());
     }
     render() {
